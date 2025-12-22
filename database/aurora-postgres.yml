@@ -1,0 +1,11 @@
+Resources:
+  AuroraCluster:
+    Type: AWS::RDS::DBCluster
+    Properties:
+      Engine: aurora-postgresql
+      EngineMode: serverless
+      MasterUsername: admin
+      MasterUserPassword: password123
+      DBSubnetGroupName: !Ref DBSubnetGroup
+      VpcSecurityGroupIds:
+        - !ImportValue RDSSecurityGroup
