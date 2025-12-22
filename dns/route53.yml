@@ -1,0 +1,10 @@
+Resources:
+  FrontendDNS:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      HostedZoneName: testapp.com.
+      Name: www.testapp.com
+      Type: A
+      AliasTarget:
+        DNSName: !ImportValue ALBDNS
+        HostedZoneId: ZXXXXXXXX
