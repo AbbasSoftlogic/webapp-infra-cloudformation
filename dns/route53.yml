@@ -6,5 +6,5 @@ Resources:
       Name: www.testapp.com
       Type: A
       AliasTarget:
-        DNSName: !ImportValue ALBDNS
-        HostedZoneId: ZXXXXXXXX
+        DNSName: webapp-alb-1011688224.ap-southeast-1.elb.amazonaws.com
+        HostedZoneId: Z1039636SR6N7OWT544Q
