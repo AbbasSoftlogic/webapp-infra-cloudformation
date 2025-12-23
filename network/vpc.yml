@@ -10,7 +10,7 @@ Resources:
   VPC:
     Type: AWS::EC2::VPC
     Properties:
-      CidrBlock: !Ref VpcCIDR
+      CidrBlock: 10.0.0.0/16
       EnableDnsSupport: true
       EnableDnsHostnames: true
       Tags:
@@ -23,8 +23,8 @@ Resources:
   AttachGateway:
     Type: AWS::EC2::VPCGatewayAttachment
     Properties:
-      VpcId: !Ref VPC
-      InternetGatewayId: !Ref InternetGateway
+      VpcId: vpc-0fa57aca26d17b622
+      InternetGatewayId: igw-05e48286bd6751a24
 
   PublicSubnetA:
     Type: AWS::EC2::Subnet
