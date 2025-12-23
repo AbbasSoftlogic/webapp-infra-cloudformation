@@ -5,14 +5,14 @@ Resources:
   VPCStack:
     Type: AWS::CloudFormation::Stack
     Properties:
-      TemplateURL: ./vpc.yml
+      TemplateURL: network/vpc.yml
 
   ALBStack:
     Type: AWS::CloudFormation::Stack
     Properties:
-      TemplateURL: ./alb.yml
+      TemplateURL: compute/alb.yml
 
   ECSStack:
     Type: AWS::CloudFormation::Stack
     Properties:
-      TemplateURL: ./ecs.yml
+      TemplateURL: compute/ecs-cluster.yml
