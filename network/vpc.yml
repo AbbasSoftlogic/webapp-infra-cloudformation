@@ -29,7 +29,7 @@ Resources:
   PublicSubnetA:
     Type: AWS::EC2::Subnet
     Properties:
-      VpcId: !Ref VPC
+      VpcId: vpc-0fa57aca26d17b622
       CidrBlock: 10.0.1.0/24
       MapPublicIpOnLaunch: true
       AvailabilityZone: ap-southeast-1a
@@ -37,7 +37,7 @@ Resources:
   PublicSubnetB:
     Type: AWS::EC2::Subnet
     Properties:
-      VpcId: !Ref VPC
+      VpcId: vpc-0fa57aca26d17b622
       CidrBlock: 10.0.2.0/24
       MapPublicIpOnLaunch: true
       AvailabilityZone: ap-southeast-1b
