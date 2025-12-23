@@ -5,7 +5,7 @@ Resources:
       Engine: aurora-postgresql
       EngineMode: serverless
       MasterUsername: admin
-      MasterUserPassword: password123
-      DBSubnetGroupName: !Ref DBSubnetGroup
+      MasterUserPassword: 12345678
+      DBSubnetGroupName: default-vpc-0fa57aca26d17b622
       VpcSecurityGroupIds:
-        - !ImportValue RDSSecurityGroup
+        - sg-0bf166982dce29c0c
