@@ -4,17 +4,17 @@ Resources:
     Properties:
       Scheme: internet-facing
       Subnets:
-        - !ImportValue PublicSubnetA
-        - !ImportValue PublicSubnetB
+        - subnet-052c9eb9639687db8z
+        - subnet-02a6ed5549ac73e98
       SecurityGroups:
-        - !ImportValue ALBSecurityGroup
+        - sg-0d2cc60f63a6fdeca
 
   Listener:
     Type: AWS::ElasticLoadBalancingV2::Listener
     Properties:
-      LoadBalancerArn: !Ref ALB
+      LoadBalancerArn: arn:aws:elasticloadbalancing:ap-southeast-1:535002860936:loadbalancer/app/webapp-alb/23ddc510249be781
       Port: 80
       Protocol: HTTP
       DefaultActions:
         - Type: forward
-          TargetGroupArn: !Ref FrontendTG
+          TargetGroupArn: arn:aws:elasticloadbalancing:ap-southeast-1:535002860936:targetgroup/frontend-target-group/c64c94c581300ca4
